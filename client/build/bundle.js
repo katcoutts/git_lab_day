@@ -73,6 +73,12 @@
 	    return p;
 	  },
 	
+	  appendImage: function(element, url){
+	    var img = document.createElement("img");
+	    img.src = url;
+	    element.appendChild(img);
+	  },
+	
 	  appendText: function(element, text, label){
 	    var pTag = this.createText(text, label);
 	    element.appendChild(pTag);
@@ -86,6 +92,7 @@
 	      this.appendText(li, player.name, "Name: ");
 	      this.appendText(li, player.position, "Positon: ");
 	      this.appendText(li, player.height, "Height: ");
+	      this.appendImage(li, player.image);
 	      container.appendChild(li);
 	    }  
 	  }
