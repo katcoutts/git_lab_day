@@ -33,3 +33,5 @@ Team.prototype = {
     request.send();
   }
 }
+
+module.exports = Team;
