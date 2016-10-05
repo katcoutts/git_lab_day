@@ -76,6 +76,8 @@
 	  appendImage: function(element, url){
 	    var img = document.createElement("img");
 	    img.src = url;
+	    img.width = 550;
+	    img.height = 250;
 	    element.appendChild(img);
 	  },
 	
