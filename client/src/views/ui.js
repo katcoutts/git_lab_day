@@ -20,6 +20,7 @@ UI.prototype = {
     img.src = url;
     img.width = 550;
     img.height = 250;
+    img.id = "playerImage";
     element.appendChild(img);
   },
 

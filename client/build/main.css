@@ -3,3 +3,15 @@ body {
   font-family: 'Fjalla One', sans-serif;;
 }
 
+h1{
+  text-align: center;
+}
+
+#players{
+  margin-left: 100px;
+}
+
+#playerImage{
+  margin-left: 50px;
+}
+
