@@ -14,12 +14,13 @@ Team.prototype = {
       var jsonString = this.responseText;
       var results = JSON.parse(jsonString);
 
-      var team = self.populateTeam(results);
+      var team = self.populateTeam(results.data);
       onCompleted(team);
     })
   },
   populateTeam: function(results){
     var team =[];
+    console.log(results);
     for(var result of results){
       var player = new Player(result);
       team.push(player);
