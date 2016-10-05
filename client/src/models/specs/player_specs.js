@@ -17,4 +17,12 @@ describe('Player', function(){
     assert.equal("Gadwin Springer", player.name);
   })
 
+  it('should have a position', function(){
+    assert.equal("Prop", player.position);
+  })
+
+  it('should have a height', function(){
+    assert.equal(191, player.height);
+  })
+
 });
