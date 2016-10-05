@@ -26,6 +26,8 @@ UI.prototype = {
     for (var player of team){
       var li = document.createElement("li");
       this.appendText(li, player.name, "Name: ");
+      this.appendText(li, player.position, "Positon: ");
+      this.appendText(li, player.height, "Height: ");
       container.appendChild(li);
     }  
   }
