@@ -3,27 +3,32 @@ var CasTigersApi = function(app){
   var casTigers = [{
     name: "Luke Dorn",
     position: "Full Back",
-    height: 175
+    height: 175,
+    image: "https://d3huroy24hmimh.cloudfront.net/media/1038.jpg"
   },
   {
     name: "Jake Webster",
     position: "Centre",
-    height: 182
+    height: 182,
+    image: "https://d3huroy24hmimh.cloudfront.net/media/1040.jpg"
   },
   {
     name: "Denny Solomona",
     position: "Winger",
-    height: 190
+    height: 190,
+    image: "https://d3huroy24hmimh.cloudfront.net/media/1042.jpg "
   },
   {
     name: "Michael Shenton",
     position: "Centre",
-    height: 190
+    height: 190,
+    image: "https://d3huroy24hmimh.cloudfront.net/media/1041.jpg"
   },
   {
     name: "Gadwin Springer",
     position: "Prop",
-    height: 191
+    height: 191,
+    image: " https://d3huroy24hmimh.cloudfront.net/media/1080.jpg"
   }
   ]
   

@@ -15,6 +15,14 @@ UI.prototype = {
     return p;
   },
 
+  appendImage: function(element, url){
+    var img = document.createElement("img");
+    img.src = url;
+    img.width = 550;
+    img.height = 250;
+    element.appendChild(img);
+  },
+
   appendText: function(element, text, label){
     var pTag = this.createText(text, label);
     element.appendChild(pTag);
@@ -26,6 +34,9 @@ UI.prototype = {
     for (var player of team){
       var li = document.createElement("li");
       this.appendText(li, player.name, "Name: ");
+      this.appendText(li, player.position, "Positon: ");
+      this.appendText(li, player.height, "Height: ");
+      this.appendImage(li, player.image);
       container.appendChild(li);
     }  
   }

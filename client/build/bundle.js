@@ -73,6 +73,14 @@
 	    return p;
 	  },
 	
+	  appendImage: function(element, url){
+	    var img = document.createElement("img");
+	    img.src = url;
+	    img.width = 550;
+	    img.height = 250;
+	    element.appendChild(img);
+	  },
+	
 	  appendText: function(element, text, label){
 	    var pTag = this.createText(text, label);
 	    element.appendChild(pTag);
@@ -84,6 +92,9 @@
 	    for (var player of team){
 	      var li = document.createElement("li");
 	      this.appendText(li, player.name, "Name: ");
+	      this.appendText(li, player.position, "Positon: ");
+	      this.appendText(li, player.height, "Height: ");
+	      this.appendImage(li, player.image);
 	      container.appendChild(li);
 	    }  
 	  }
@@ -111,7 +122,6 @@
 	      if(this.status != 200) return;
 	      var jsonString = this.responseText;
 	      var results = JSON.parse(jsonString);
-	// above results is an object inside of which is an array of our objects so we need to do .data below to get into the overall object.
 	      var team = self.populateTeam(results.data);
 	      onCompleted(team);
 	    })
@@ -143,6 +153,7 @@
 	  this.name = options.name;
 	  this.position = options.position;
 	  this.height = options.height;
+	  this.image = options.image;
 	}
 	
 	module.exports = Player;
