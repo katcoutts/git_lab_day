@@ -25,10 +25,13 @@ var CasTigersApi = function(app){
     position: "Prop",
     height: 191
   }
-
-
-
   ]
   
+  app.get("/api/castigers", function(req,res){
+    res.json({data: casTigers});
+  })
 
 }
+
+
+module.exports = CasTigersApi;
