@@ -17,5 +17,13 @@ Team.prototype = {
       var team = self.populateTeam(results);
       onCompleted(team);
     })
+  },
+  populateTeam: function(results){
+    var team =[];
+    for(var result of results){
+      var player = new Player(result);
+      team.push(player);
+    }
+    return team;
   }
 }
